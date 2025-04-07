@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: lightgrey;
+            font-family: Arial, sans-serif;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            margin: 0 20px;
+            margin-right: 70px;
+            margin-left: 70px;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav li a:hover {
+            background-color: #555;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        section, article, aside {
+            flex: 1;
+            border: 2px solid black;
+            background-color: #b1adad;
+            padding: 15px;
+            text-align: center;
+        }
+
+        aside ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        aside ul li {
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+
+        @media only screen and (max-width: 768px) {
+        .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="flex-container">
+
+        <!-- Header -->
+        <header>
+            <h1>Header</h1>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <section>
+                <h2>About Us</h2>
+                <p>This is the about section of our website.</p>
+            </section>
+
+            <article>
+                <h2>Latest News</h2>
+                <p>This is the latest news article.</p>
+            </article>
+
+            <aside>
+                <h2>Related Links</h2>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </aside>
+            
+        </div>
+
+       
+        <footer>
+            <h1>Contact us:</h1>
+            <p>&copy; 2025 Sample Website. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
